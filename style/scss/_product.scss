@@ -1,0 +1,81 @@
+.product{
+    &__container{
+        display: flex;
+        justify-content: center;
+        gap: 52px;
+
+        padding: 1rem;        
+    }
+
+    &__name{
+        font-family: var(--font-comic);
+        font-weight: 400;
+
+        text-transform: capitalize;
+        text-align: center;
+
+        padding: .5rem;
+    }
+
+    &__card{
+        padding: 1rem;
+        margin: 1rem;
+
+        width: 360px;
+
+        border: 2px solid var(--text-color);
+        background-color: var(--bg-light);
+
+        select{
+            margin: .5rem;
+            width: 250px;
+
+            border: 2px solid var(--text-color);
+
+            &:active{
+                outline: 2px solid var(--text-color);
+            }
+
+            option{
+                text-align: center;
+            }
+        }
+
+    }
+
+    &__image{
+        
+        width: 256px;
+        height: 512px;
+
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+
+        margin: 0 auto;
+
+        &.db{
+            background-image: url("../../assets/images/dragon_ball_cover.jpg");
+        }
+
+        &.dn{
+            background-image: url("../../assets/images/death_note_cover.jpg");
+        }
+
+        &.eva{
+            background-image: url("../../assets/images/eva_cover.jpg");
+        }
+    }
+
+    &__info{
+        margin: .25rem;
+
+        p{
+            font-family: var(--font-dosis);
+            font-weight: 700;
+
+            padding: .25rem;
+        }
+    }
+}

@@ -1,0 +1,168 @@
+.login{
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+
+    transform: scale(0);
+
+    &.in{
+        animation: unfoldIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+
+        .login__form{
+            transform: scale(0);
+            animation: zoomIn var(--at-duration) .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        }
+    }
+
+    &.out{
+        transform: scale(1);
+        animation: unfoldOut 1s var(--at-duration) cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+
+        .login__form{
+            transform: scale(1);
+            animation: zoomOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        }
+    }
+
+    &__close{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+
+        margin: .5rem;
+
+        background-color: var(--bg-light);
+        border: none;
+        border-radius: 50%;
+
+        font-size: 2.5rem;
+        font-family: var(--text-dosis);
+        font-weight: 900;
+
+        cursor: pointer;
+        transition: background-color var(--at-duration) ease;
+
+        &:hover,
+        &:focus{
+            background-color: var(--bg-lightgrey);
+        }
+    }
+
+    &.hidden{
+        display: none;
+    }
+    
+
+    &__form{
+
+        filter: grayscale(50%);
+
+        position: relative;
+        margin: 5% auto;
+
+        height: 750px;
+        width: 550px;
+
+        background-color: var(--bg-lightgrey);
+        background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+        border: thick solid var(--black);
+ 
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+
+        h1{
+            font-family: var(--font-comic);
+            text-transform: uppercase;
+            
+        }
+    }
+
+    &__button{
+        padding: .5rem;
+        margin: auto;
+
+        font-family: var(--font-dosis);
+        font-weight: 700;
+        font-size: 1rem;
+
+        border: 2px solid var(--text-color);
+        border-radius: .5rem;
+
+        &:hover{
+            cursor: pointer;
+
+            background-color: var(--dark-grey);
+            color: var(--text-light);
+            border-color: var(--text-light);
+        }
+
+    }
+
+    &__inputs{
+
+        display: flex;
+        flex-flow: column nowrap;
+
+        .login__email,
+        .login__password{
+            padding: 1rem;
+
+            input{
+                padding: .5rem;
+                width: 256px;
+                border: 2px solid var(--text-color);
+            }
+        }
+
+    }
+}
+
+@keyframes unfoldIn{
+    0%{
+        transform: scaleY(.005) scaleX(0);
+    }
+    50%{
+        transform: scaleY(.005) scaleX(1);
+    }
+    100%{
+        transform: scaleY(1) scaleX(1);
+    }
+}
+
+@keyframes unfoldOut{
+    0%{
+        transform: scaleY(1) scaleX(1);
+    }
+    50%{
+        transform: scaleY(.005) scaleX(1);
+    }
+    100%{
+        transform: scaleY(.005) scaleX(0);
+    }
+}
+
+@keyframes zoomIn{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomOut{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+}

@@ -1,0 +1,118 @@
+.sidebar{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+
+    width: 0;
+    height: 100%;
+    transition: width var(--at-duration) ease, opacity var(--at-duration) ease;
+    
+    background-color: var(--dark-grey);
+    color: var(--text-light);
+
+    border-left: thick solid var(--text-color);
+
+    &__close{
+        position: absolute;
+        left: -5%;
+        top: -1%;
+
+        width: fit-content;
+    
+        font-size: 2rem;
+        color: var(--dark-grey);
+        border-radius: 50%;
+
+        i{
+            background-color: var(--bg-lightgrey);
+            border-radius: 50%;
+
+            &:hover{
+                background-color: var(--bg-light);
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    h2{
+        font-family: var(--font-comic);
+        padding: .5rem;
+        padding-left: 1.2rem;
+    }
+
+    hr{
+        margin: 1rem .5rem;
+    }
+
+    &__cart{
+        display: flex;
+        flex-flow: column nowrap;
+
+        border: thin solid var(--text-light);
+
+        .cart-list li{
+            list-style: none;
+            padding: .25rem;
+            
+            font-family: var(--font-dosis);
+
+            position: relative;
+            
+            span{
+                text-align: right;
+
+                position: absolute;
+                right: 5%;
+
+            }
+        }
+    }
+
+    &__cart-total{
+        text-align: right;
+
+        font-family: var(--font-dosis);
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    &__controls{
+
+        display: flex;
+        justify-content: space-between;
+
+        & button,
+        & a{
+            padding: .8rem;
+            margin: 1rem;
+
+            border: 3px solid var(--text-light);
+            text-decoration: none;
+            cursor: pointer;
+
+            background-color: var(--black);
+            color: var(--text-light);
+        }
+
+        button:hover{
+            color: var(--error);
+            border-color: var(--error);
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+
+    &__checkout{
+        &.disabled{
+            border-color: var(--bg-lightgrey);
+            color: var(--bg-lightgrey);
+            background-color: var(--bg-light);
+            cursor: not-allowed;
+        }
+    }
+
+}

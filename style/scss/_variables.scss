@@ -1,0 +1,25 @@
+
+//Colors
+:root{
+    --text-color: #111;
+    --text-light: whitesmoke;
+    --bg-light: whitesmoke;
+    --bg-lightgrey: lightgrey;
+    --black: #111;
+    --dark-grey: #2d2d2d;
+    --grey: #6f6f6f;
+    --error: red;
+    --blue: rgb(0, 155, 255);
+    --green: rgb(105, 220, 105);
+}
+
+//Fonts & Text
+:root{
+    --font-comic: 'Comic Neue', cursive;
+    --font-dosis: 'Dosis', sans-serif;
+}
+
+//Transition duration
+:root{
+    --at-duration: .3s;
+}

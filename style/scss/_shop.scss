@@ -1,0 +1,49 @@
+//Welcome message
+
+.welcome{
+
+    padding: 1rem;
+    width: fit-content;
+
+    h4{
+        font-family: var(--font-comic);
+        font-size: 1.2rem;
+        
+        padding: .5rem;
+    }
+}
+
+.shop{
+    position: relative;
+}
+
+.cart{
+    position: absolute;
+    top: 0;
+    right: 2rem;
+
+    font-size: 2rem;
+
+    padding: 1rem;
+    width: fit-content;
+    cursor: pointer;
+    
+    &__counter{
+        content: '0';
+        background-color: red;
+        border-radius: 50%;
+        color: var(--text-light);
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 8px 12px;
+
+        font-size: .8rem;
+        font-family: var(--font-dosis);
+        font-weight: 700;
+        
+        
+    }
+
+}

@@ -1,0 +1,48 @@
+.error{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin: 1rem auto;
+
+    &__image{
+        margin: 2rem auto;
+
+        width: 512px;
+        height: 512px;
+
+        position: relative;
+
+        border: thick solid var(--text-color);
+    }
+
+    &__message{
+        color: var(--error);
+        
+        font-family: var(--font-dosis);
+        font-weight: 700;
+        font-size: 2rem;
+
+        text-align: center;
+
+        padding: 1rem;
+
+    }
+
+    a{
+
+        color: var(--text-color);
+        font-size: 1.2rem;
+        font-family: var(--comic-neue);
+        font-weight: 700;
+
+        text-decoration: none;
+
+        margin: 2rem .5rem;
+        padding: .5rem;
+        width: fit-content;
+
+        border: thick solid var(--text-color);
+        border-radius: .5rem;
+
+    }
+}

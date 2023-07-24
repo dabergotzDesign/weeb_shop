@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    height: 100%;
+}
+
+//refers to login form position
+body{
+    position: relative;
+    overflow-x: hidden;
+}
+
+main{
+    height: 100vh;
+    width: 100%;
+}
+
+.shop{
+    background-color: white;
+    background-image: url("../../assets/images/book_hearts.png");
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: 360px;
+    background-attachment: fixed;
+}
+
+.images__container{
+    position: absolute;
+    bottom: 0;
+
+    img{
+        height: 256px;
+        width: 256px;
+    }
+}

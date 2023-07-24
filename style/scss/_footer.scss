@@ -1,0 +1,15 @@
+.footer{
+    height: 60px;
+    width: 100%;
+
+    background-color: var(--bg-lightgrey);
+    border-top: thick solid var(--text-color);
+
+    font-family: var(--font-dosis);
+    font-weight: 700;
+    
+
+    p{
+        padding: 1rem;
+    }
+}

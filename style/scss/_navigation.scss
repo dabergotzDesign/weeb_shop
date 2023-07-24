@@ -1,0 +1,103 @@
+.header{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--bg-lightgrey);
+    border-bottom: thick solid var(--text-color);
+
+    padding: 1rem;
+
+    //grain
+    background: url("https://grainy-gradients.vercel.app/noise.svg");
+
+    
+
+    &__logo{
+
+        display: flex;
+        align-items: center;
+
+        &-image{
+            background-image: url('../../assets/images/logo_var1.png.png');
+            background-position: center;
+            background-size: contain;
+
+            height: 90px;
+            width: 90px;
+
+            outline: thick solid var(--text-color);
+            border-radius: 50%;
+
+            margin: .5rem;
+            transform: rotate(-10deg); //slightly titled head
+        }
+
+        h1{
+            text-transform: uppercase;
+            font-family: var(--font-comic);
+        }
+    }
+
+    &__navigation{
+        align-self: center;
+
+        ul{
+            li{
+                list-style: none;
+                display: inline-block;
+
+                a{
+                    text-decoration: none;
+                    color: var(--text-color);
+
+                    font-family: var(--font-comic);
+                    font-weight: bold;
+                    font-size: 1.2rem;
+
+                    padding: 1rem;
+
+                    //transition: background-color var(--at-duration) ease, outline var(--at-duration) ease;
+
+                    &:hover{
+                        background-color: var(--bg-light);
+                        border-radius: 50%;
+                        outline: thin solid var(--text-color);
+                    }
+                }
+            }
+        }
+    }
+
+    &__login{
+
+        &-button{
+            margin: 1rem;
+            padding: .8rem;
+
+            font-family: var(--font-comic);
+            font-weight: 700;
+            font-size: 1.2rem;
+
+            border: 4px solid var(--text-color);
+            border-radius: .5rem;
+
+            background-color: var(--bg-light);
+            color: var(--text-color);
+            
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color var(--at-duration) ease, color var(--at-duration) ease, border-color var(--at-duration) ease;
+            position: relative;
+
+            &:hover,
+            &:focus{
+                background-color: var(--bg-lightgrey);
+                color: var(--dark-grey);
+                border-color: var(--dark-grey);
+            }
+
+        }
+    }
+}
